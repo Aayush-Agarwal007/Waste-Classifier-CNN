@@ -1,9 +1,17 @@
 """
-WasteAI: Smart Waste Segregation System using Deep Learning
+WasteAI v2.0: Smart Waste Segregation + Cost Calculator
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 An intelligent waste classification application powered by CNN-based 
 transfer learning. Classifies waste into 6 categories with instant 
-disposal guidance and environmental impact metrics.
+disposal guidance, environmental metrics, and AI-powered cost calculation
+for recycling incentives.
+
+Features:
+- 🔍 Smart waste classification (94-98% accuracy)
+- 🗑️ Disposal guidance & recyclability info
+- 📊 Environmental impact dashboard
+- 💰 Cost calculator with market pricing & carbon credits
+- 🎯 Gamification & achievement system
 
 Author: Aayush Agarwal
 GitHub: https://github.com/Aayush-Agarwal007
@@ -32,14 +40,22 @@ class CompatDense(layers.Dense):
 #  PAGE CONFIG  (must be first Streamlit call)
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="WasteAI - Smart Waste Segregation",
+    page_title="WasteAI v2.0 - Cost Calculator & Waste Classification",
     page_icon="♻️",
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        "About": "### WasteAI v2.0\nSmart Waste Segregation using Deep Learning\n\n"
+        "About": "### WasteAI v2.0 - Enhanced with Cost Calculator\n"
+                 "Smart Waste Segregation + Economic Incentives\n\n"
+                 "**Features:**\n"
+                 "- AI Classification (94-98%)\n"
+                 "- Disposal Guidance\n"
+                 "- Environmental Metrics\n"
+                 "- 💰 Cost Calculator (NEW!)\n"
+                 "- 🎯 Gamification & Achievements\n\n"
                  "**Author**: Aayush Agarwal\n"
-                 "**GitHub**: [Aayush-Agarwal007](https://github.com/Aayush-Agarwal007)",
+                 "**GitHub**: [Aayush-Agarwal007](https://github.com/Aayush-Agarwal007)\n"
+                 "**Version**: 2.0",
     }
 )
 
@@ -570,9 +586,9 @@ with st.sidebar:
 st.markdown(
     """
     <div class="header-banner">
-        <h1>♻️ WasteAI — Smart Waste Segregation</h1>
-        <p>Intelligent waste classification powered by Deep Learning</p>
-        <div class="header-subtitle">📤 Upload • 🤖 Classify • 🗑️ Dispose • 🌍 Recycle</div>
+        <h1>♻️ WasteAI v2.0 — Smart Waste Segregation + Cost Calculator</h1>
+        <p>AI-powered classification with economic incentives for waste sorting</p>
+        <div class="header-subtitle">📤 Upload • 🤖 Classify • 💰 Calculate Value • 🎯 Earn</div>
     </div>
     """,
     unsafe_allow_html=True,
